@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -27,5 +28,24 @@ function App = () => {
         </>
   );
 };
+=======
+import "./App.css";
 
-export default App
+function App() {
+  return (
+    <>
+      <h1>Väder applikation</h1>
+
+      <input type="text" placeholder="Sök" />
+
+      <p>Stockholm, Sverige</p>
+
+      <p>temperatur 20C</p>
+
+      <p>soligt</p>
+    </>
+  );
+}
+>>>>>>> main
+
+export default App;

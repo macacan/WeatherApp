@@ -2,11 +2,17 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import "./css/style.css";
+
+const bakgrund = new URL("../src/assets/bakgrund.avif", import.meta.url)
+
 
 const api = {
   key: "db87f278d9f51e2ce2523b851566af30",
   base: "https://api.openweathermap.org/data/2.5/",
 };
+
+
 
 function App() {
   const [search, setSearch] = useState("");
@@ -21,9 +27,19 @@ function App() {
       });
   };
 
+
   return (
+    
     <div className="App">
+
+        <div className="bg-img">
+          <img src={bakgrund} alt="" />
+        </div>
+
+      
       <header className="App-header">
+
+        
         <h1>Väderkoll</h1>
 
         <div>

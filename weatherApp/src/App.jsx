@@ -19,7 +19,7 @@ function App() {
   const [weather, SetWeather] = useState({});
 
   const searchPressed = () => {
-    fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
+    fetch(`${api.base}weather?q=${search}&lang=SE&units=metric&APPID=${api.key}`)
       .then((res) => res.json())
       .then((result) => {
         SetWeather(result);
@@ -58,7 +58,6 @@ function App() {
             <p>{weather.timezone}</p>
 
             <div>
-              <p>{weather.weather[0].main}</p>
               <p>{weather.weather[0].description}</p>
             </div>
           </div>

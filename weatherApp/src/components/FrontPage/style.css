@@ -1,4 +1,4 @@
-img {
+.bg-img {
     max-width: 100%;
     position: absolute;
     top: 0;
@@ -8,4 +8,9 @@ img {
 
 body{
     overflow: hidden;
+}
+
+.icon{  
+    width: 80px;
+    height: 80px;  
 }

@@ -1,0 +1,26 @@
+
+
+.resultBox{
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    transition: height 500ms ease, opacity 500ms ease;
+}
+
+.city{
+
+    font-weight: 500;
+    font-size: large;
+}
+
+.temp{
+
+    font-weight: 400;
+    font-size: large;
+}
+
+.desc{
+
+    
+
+}

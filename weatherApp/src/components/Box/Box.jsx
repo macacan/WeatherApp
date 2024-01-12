@@ -8,7 +8,7 @@ function ResultBox(props) {
         borderRadius: props.borderradius,
     };
 
-    return <div style={styleObject}>{props.children}</div>;
+    return <div className="resultBox" style={styleObject}>{props.children}</div>;
 }
 
 export default ResultBox;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import "./components/Box/Box.css";
 import SearchComponent from "./components/Search/search";
 import WeatherDisplay from "./components/WeatherDisplay/weather";
 
@@ -16,7 +15,10 @@ function App() {
   const searchWeather = (query) => {
     fetch(`${api.base}weather?q=${query}&lang=SE&units=metric&APPID=${api.key}`)
       .then((res) => res.json())
-      .then((result) => setWeather(result));
+      .then((result) => {
+        setWeather(result);
+        // console.log(result);
+      });
   };
 
   useEffect(() => {

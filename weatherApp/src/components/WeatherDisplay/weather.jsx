@@ -4,14 +4,10 @@ import "../WeatherDisplay/weather.css";
 
 const WeatherDisplay = ({ weather }) => {
   return (
-    <ResultBox
-      className="resultBox"
-      color="rgba(180, 180, 180, 0.5)"
-      borderradius="10px"
-    >
+    <ResultBox>
       {" "}
       {weather && weather.name && (
-        <div>
+        <div className="weatherBox">
           <p className="city">{weather.name}</p>
           <p className="temp">{Math.round(weather.main.temp)}°C</p>
           <div>
@@ -20,7 +16,7 @@ const WeatherDisplay = ({ weather }) => {
                 weather.weather[0].description.slice(1)}
             </p>
             {weather.timezone && (
-              <p>
+              <p className="time">
                 Lokal Tid:{" "}
                 {new Date(Date.now() + weather.timezone * 1000)
                   .toLocaleTimeString([], {

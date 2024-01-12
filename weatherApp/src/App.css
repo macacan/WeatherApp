@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 
 body {
@@ -10,3 +11,28 @@ body {
   background: url("../src/assets/bakgrund.avif") no-repeat center center fixed;
 }
 
+.resultBox{
+
+  background:rgba(44, 43, 43, 0.8);
+  border-radius: 10px;
+  border: 2px solid rgb(85, 84, 84);
+  
+}
+
+button {
+  height:22px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 12pt;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.searchfield{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

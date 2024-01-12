@@ -1,17 +1,14 @@
-.city{
-    font-weight: 500;
-    font-size: large;
-}
-
-.temp{
-
-    font-weight: 400;
-    font-size: large;
+.weatherBox {
+  text-shadow: rgb(37, 37, 37) 1.5px 1.1px;
+  font-size: large;
+  font-weight: 500;
 }
 
 .icon {
-    width: 70px;
-    height: 70px;
-  }
-  
-  
+  width: 70px;
+  height: 70px;
+}
+
+.resultBox:hover{
+    background:rgba(87, 85, 85, 0.6);
+}

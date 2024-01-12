@@ -9,10 +9,10 @@ const SearchComponent = ({ onSearch }) => {
   };
 
   return (
-    <div>
+    <div className="searchfield">
       <input
         type="text"
-        placeholder="Sök..."
+        placeholder="Sök på stad"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

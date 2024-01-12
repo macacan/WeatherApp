@@ -1,8 +1,7 @@
 
-const Box = (props) => {
+const ResultBox = (props) => {
 
 
-    //inline styling CSS in JS, sker genom att ett styling object skapas
         let styleObject={
             background: props.color,
             margin:"5px",
@@ -17,5 +16,5 @@ const Box = (props) => {
     }
     
     
-    export default Box;
+    export default ResultBox;
 

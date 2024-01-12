@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const SearchComponent = ({ onSearch }) => {
   const [search, setSearch] = useState("");
 
@@ -12,7 +13,6 @@ const SearchComponent = ({ onSearch }) => {
       <input
         type="text"
         placeholder="Sök..."
-        debounceTimeout={10000}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

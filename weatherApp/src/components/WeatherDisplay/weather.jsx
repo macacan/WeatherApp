@@ -1,11 +1,12 @@
 import React from "react";
 import ResultBox from "../Box/Box";
+import "../WeatherDisplay/weather.css";
 
 const WeatherDisplay = ({ weather }) => {
   return (
     <ResultBox
       className="resultBox"
-      color="rgba(255, 255, 255, 0.2)"
+      color="rgba(180, 180, 180, 0.5)"
       borderradius="10px"
     >
       {" "}

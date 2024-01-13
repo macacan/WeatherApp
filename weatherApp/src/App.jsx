@@ -11,6 +11,7 @@ const api = {
 
 function App() {
   const [weather, setWeather] = useState({});
+  const [forecast, setForecast] = useState([]); // Lägg till en state för daglig prognos
   const [search, setSearch] = useState("Stockholm");
 
   const searchWeather = (query) => {
@@ -18,21 +19,24 @@ function App() {
       .then((res) => res.json())
       .then((result) => {
         setWeather(result);
-        // console.log(result);
+        console.log(result);
       });
   };
 
   const searchForecast = (query) => {
-    fetch(`${api.base}forecast?q=${query}&lang=SE&units=metric&APPID=${api.key}`)
+    fetch(
+      `${api.base}forecast?q=${query}&lang=SE&units=metric&APPID=${api.key}`
+    )
       .then((res) => res.json())
       .then((result) => {
-        setWeather(result);
-       // console.log(result);
+        setForecast(result.list); // Uppdatera bara daglig prognoslistan
+        console.log(result);
       });
   };
 
   useEffect(() => {
     searchWeather(search);
+    searchForecast(search); // Hämta väderprognos separat
   }, [search]);
 
   return (
@@ -40,14 +44,10 @@ function App() {
       <header className="App-header">
         <h1>Väderkoll</h1>
         <WeatherDisplay weather={weather} />
-        <h4>Mer Information</h4>
-        <Forecast weather={weather} />
-
+        <Forecast weather={weather} forecast={forecast} /> {/* Skicka med daglig prognos */}
         <SearchComponent onSearch={setSearch} />
       </header>
-      
     </div>
   );
 }
-
 export default App;

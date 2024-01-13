@@ -9,3 +9,4 @@ function ForecastBox(props) {
 }
 
 export default ForecastBox;
+

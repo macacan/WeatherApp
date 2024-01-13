@@ -7,7 +7,7 @@ const WeatherDisplay = ({ weather }) => {
     <ResultBox>
       {" "}
       {weather && weather.name && (
-        <div className="weatherBox">
+        <div className="weatherBox1">
           <p className="city">{weather.name}</p>
           <p className="temp">{Math.round(weather.main.temp)}°C</p>
           <div>

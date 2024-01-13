@@ -1,4 +1,4 @@
-.weatherBox {
+.weatherBox1 {
   text-shadow: rgb(37, 37, 37) 1.5px 1.1px;
   font-size: large;
   font-weight: 500;
@@ -9,6 +9,27 @@
   height: 70px;
 }
 
-.resultBox:hover{
-    background:rgba(87, 85, 85, 0.6);
+
+.forecastContainer {
+  display: flex;
+  justify-content: space-between; /* Justera efter dina preferenser */
 }
+  .forecastContainer {
+    display: flex;
+    justify-content: space-between; 
+  }
+
+  
+
+  .weatherBox {
+    display: flex;
+    justify-content: space-around; /* Justera beroende på dina preferenser */
+  }
+  
+  .dailyForecastContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }

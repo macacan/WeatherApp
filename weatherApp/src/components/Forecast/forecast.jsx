@@ -1,42 +1,61 @@
-import React from "react";
-import ForecastBox from "../Box/forecastBox";
+import React, { useState } from "react";
+
+import DailyForecast from "../Forecast/dailyForecast";
+
 import "../WeatherDisplay/weather.css";
 
-const Forecast = ({ weather }) => {
+const Forecast = ({ forecast }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  const handleToggleDetails = () => {
+    setShowDetails(!showDetails);
+  };
+
+  const extractEveryEightItems = (array) => {
+    const extractedArray = [];
+
+    for (let i = 7; i < array.length; i += 8) {
+      extractedArray.push(array[i]);
+    }
+
+    return extractedArray;
+  };
+
+  const modifiedForecast = extractEveryEightItems(forecast);
+
+  const getDayOfWeek = (date) => {
+    const days = [
+      "Söndag",
+      "Måndag",
+      "Tisdag",
+      "Onsdag",
+      "Torsdag",
+      "Fredag",
+      "Lördag",
+    ];
+
+    return days[new Date(date).getDay()];
+  };
+
   return (
-    <ForecastBox>
-      {" "}
-      {weather && weather.name && (
+    <div>
+      <button className="btn-Detail" onClick={handleToggleDetails}>
+        {showDetails ? "Dölj detaljer" : "Visa detaljer"}
+      </button>
+
+      {showDetails && modifiedForecast.length > 0 && (
         <div className="weatherBox">
-          <p className="city">{weather.name}</p>
-          <p className="temp">{Math.round(weather.main.temp)}°C</p>
-          <p className="desc">
-            {weather.weather[0].description.charAt(0).toUpperCase() +
-              weather.weather[0].description.slice(1)}
-          </p>
-          <div>
-            {weather.timezone && (
-              <p className="time">
-                Lokal Tid:{" "}
-                {new Date(Date.now() + weather.timezone * 1000)
-                  .toLocaleTimeString([], {
-                    timeZone: "UTC",
-                    timeZoneName: "short",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })
-                  .slice(0, -3)}
-              </p>
-            )}
-            <img
-              className="icon"
-              src={`http://openweathermap.org/img/w/${weather?.weather[0].icon}.png`}
-              alt=""
-            />
-          </div>
+          {modifiedForecast.map((day) => (
+            <div className="dailyForecastContainer" key={day.dt}>
+              <DailyForecast
+                day={day}
+                dayOfWeek={getDayOfWeek(day.dt_txt.slice(0, 10))}
+              />
+            </div>
+          ))}
         </div>
       )}
-    </ForecastBox>
+    </div>
   );
 };
 

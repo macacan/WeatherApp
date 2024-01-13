@@ -1,6 +1,3 @@
-
-
-
 function ResultBox(props) {
     let styleObject = {
         background: props.color,

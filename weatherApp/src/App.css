@@ -36,3 +36,12 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+h4{
+  border: 1px solid transparent;
+  font-size: 12pt;
+  font-weight: 400;
+  background:rgba(44, 43, 43, 0.8);
+  border-radius: 50px;
+  border: 2px solid rgb(12, 12, 12);
+}

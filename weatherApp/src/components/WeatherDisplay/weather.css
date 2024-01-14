@@ -12,8 +12,9 @@
 
 .forecastContainer {
   display: flex;
-  justify-content: space-between; /* Justera efter dina preferenser */
+  justify-content: space-between; 
 }
+
   .forecastContainer {
     display: flex;
     justify-content: space-between; 
@@ -23,13 +24,6 @@
 
   .weatherBox {
     display: flex;
-    justify-content: space-around; /* Justera beroende på dina preferenser */
-  }
+    justify-content: space-around; 
   
-  .dailyForecastContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-  }
+ 

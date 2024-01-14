@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import DailyForecast from "../Forecast/dailyForecast";
-
 import "../WeatherDisplay/weather.css";
 
 const Forecast = ({ forecast }) => {

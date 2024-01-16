@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import  "../Search/search.css"
 
 const SearchComponent = ({ onSearch }) => {
   const [search, setSearch] = useState("");
@@ -17,7 +18,7 @@ alert("Type something to search")
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button onClick={handleSearch}>Sök</button>
+      <button className="searchbtn" onClick={handleSearch}>Sök</button>
     </div>
   );
 };

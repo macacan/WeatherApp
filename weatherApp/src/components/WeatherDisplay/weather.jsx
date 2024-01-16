@@ -1,6 +1,9 @@
 import React from "react";
 import "../WeatherDisplay/weather.css";
 
+
+
+
 const WeatherDisplay = ({ weather }) => {
   return (
     <div className="resultBox">
@@ -21,10 +24,15 @@ const WeatherDisplay = ({ weather }) => {
                   .toLocaleTimeString([], {
                     timeZone: "UTC",
                     timeZoneName: "short",
+                    year:"2-digit",
+                    month:"2-digit",
+                    day:"2-digit",
                     hour: "2-digit",
                     minute: "2-digit",
+
                   })
                   .slice(0, -3)}
+                  
               </p>
             )}
             <img

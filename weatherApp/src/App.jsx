@@ -11,7 +11,7 @@ const api = {
 
 function App() {
   const [weather, setWeather] = useState({});
-  const [forecast, setForecast] = useState([]); 
+  const [forecast, setForecast] = useState([]);
   const [search, setSearch] = useState("Stockholm");
 
   const searchWeather = (query) => {
@@ -23,16 +23,13 @@ function App() {
       });
   };
 
-  
-  
-
   const searchForecast = (query) => {
     fetch(
       `${api.base}forecast?q=${query}&lang=SE&units=metric&APPID=${api.key}`
     )
       .then((res) => res.json())
       .then((result) => {
-        setForecast(result.list); 
+        setForecast(result.list);
         console.log(result);
       });
   };
@@ -47,7 +44,6 @@ function App() {
       <header className="App-header">
         <h1>Väderkoll</h1>
         <SearchComponent onSearch={setSearch} />
-
         <WeatherDisplay weather={weather} />
         <Forecast weather={weather} forecast={forecast} />
       </header>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DailyForecast from "../Forecast/dailyForecast";
 import "../WeatherDisplay/weather.css";
-import SearchComponent from "../Search/search";
+import "../Forecast/forecast.css"
 
 const Forecast = ({ forecast }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -42,7 +42,6 @@ const Forecast = ({ forecast }) => {
         {showDetails ? "Dölj detaljer" : "Visa detaljer"}
       </button>
 
-
       {showDetails && modifiedForecast.length > 0 && (
         <div className="weatherBox">
           {modifiedForecast.map((day) => (
@@ -50,7 +49,6 @@ const Forecast = ({ forecast }) => {
               <DailyForecast
                 day={day}
                 dayOfWeek={getDayOfWeek(day.dt_txt.slice(0, 10))}
-                
               />
             </div>
           ))}

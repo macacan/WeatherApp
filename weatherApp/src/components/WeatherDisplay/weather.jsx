@@ -1,10 +1,9 @@
 import React from "react";
-import ResultBox from "../Box/Box";
 import "../WeatherDisplay/weather.css";
 
 const WeatherDisplay = ({ weather }) => {
   return (
-    <ResultBox>
+    <div className="resultBox">
       {" "}
       {weather && weather.name && (
         <div className="weatherBox1">
@@ -36,7 +35,7 @@ const WeatherDisplay = ({ weather }) => {
           </div>
         </div>
       )}
-    </ResultBox>
+    </div>
   );
 };
 

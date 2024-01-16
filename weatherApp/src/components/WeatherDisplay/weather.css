@@ -9,21 +9,21 @@
   height: 70px;
 }
 
+.resultBox {
+  margin: "5px";
+}
 
 .forecastContainer {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
-  .forecastContainer {
-    display: flex;
-    justify-content: space-between; 
-  }
+.forecastContainer {
+  display: flex;
+  justify-content: space-between;
+}
 
-  
-
-  .weatherBox {
-    display: flex;
-    justify-content: space-around; 
-  }
- 
+.weatherBox {
+  display: flex;
+  justify-content: space-around;
+}

@@ -23,6 +23,9 @@ function App() {
       });
   };
 
+  
+  
+
   const searchForecast = (query) => {
     fetch(
       `${api.base}forecast?q=${query}&lang=SE&units=metric&APPID=${api.key}`
@@ -43,9 +46,10 @@ function App() {
     <div className="container">
       <header className="App-header">
         <h1>Väderkoll</h1>
+        <SearchComponent onSearch={setSearch} />
+
         <WeatherDisplay weather={weather} />
         <Forecast weather={weather} forecast={forecast} />
-        <SearchComponent onSearch={setSearch} />
       </header>
     </div>
   );

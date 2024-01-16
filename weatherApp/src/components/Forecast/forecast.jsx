@@ -8,7 +8,6 @@ const Forecast = ({ forecast }) => {
 
   const handleToggleDetails = () => {
     setShowDetails(!showDetails);
-    SearchComponent(hidden);
   };
 
   const extractEveryEightItems = (array) => {
@@ -43,6 +42,7 @@ const Forecast = ({ forecast }) => {
         {showDetails ? "Dölj detaljer" : "Visa detaljer"}
       </button>
 
+
       {showDetails && modifiedForecast.length > 0 && (
         <div className="weatherBox">
           {modifiedForecast.map((day) => (
@@ -50,6 +50,7 @@ const Forecast = ({ forecast }) => {
               <DailyForecast
                 day={day}
                 dayOfWeek={getDayOfWeek(day.dt_txt.slice(0, 10))}
+                
               />
             </div>
           ))}

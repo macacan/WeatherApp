@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-
 const SearchComponent = ({ onSearch }) => {
   const [search, setSearch] = useState("");
 
   const handleSearch = () => {
-    onSearch(search);
+    if (search !== "") onSearch(search);
+else
+alert("Type something to search")
   };
 
   return (

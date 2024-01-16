@@ -3,8 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  
 }
+
+
 
 .App-header{
   display: flex;
@@ -21,14 +22,14 @@ body {
 
 .dailyForecastBox{
   width: 170px;
+  height: auto;
   background:rgba(44, 43, 43, 0.8);
   border-radius: 10px;
   border: 2px solid rgb(85, 84, 84);
-
 }
 .resultBox{
-
-  width: 220px;
+  
+  width: 200px;
   background:rgba(44, 43, 43, 0.8);
   border-radius: 10px;
   border: 2px solid rgb(85, 84, 84);

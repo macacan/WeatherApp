@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import DailyForecast from "../Forecast/dailyForecast";
 import "../WeatherDisplay/weather.css";
+import SearchComponent from "../Search/search";
 
 const Forecast = ({ forecast }) => {
   const [showDetails, setShowDetails] = useState(false);
 
   const handleToggleDetails = () => {
     setShowDetails(!showDetails);
+    SearchComponent(hidden);
   };
 
   const extractEveryEightItems = (array) => {

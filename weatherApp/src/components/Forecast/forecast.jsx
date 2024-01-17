@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DailyForecast from "../Forecast/dailyForecast";
-import "../WeatherDisplay/weather.css";
 import "../Forecast/forecast.css"
 
 const Forecast = ({ forecast }) => {
@@ -43,7 +42,7 @@ const Forecast = ({ forecast }) => {
       </button>
 
       {showDetails && modifiedForecast.length > 0 && (
-        <div className="weatherBox">
+        <div className="forecastRow">
           {modifiedForecast.map((day) => (
             <div className="dailyForecastContainer" key={day.dt}>
               <DailyForecast

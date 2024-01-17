@@ -1,3 +1,16 @@
 .btn-Detail {
   width: 200px;
 }
+
+.dailyForecastBox {
+    width: 170px;
+    height: auto;
+    background: rgba(44, 43, 43, 0.8);
+    border-radius: 10px;
+    border: 2px solid rgb(85, 84, 84);
+  }
+
+  .forecastRow{
+    display: flex;
+    justify-content: space-around;
+  }

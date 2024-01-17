@@ -17,20 +17,6 @@ body {
   background: url("../src/assets/bakgrund.avif") no-repeat center center fixed;
 }
 
-.dailyForecastBox {
-  width: 170px;
-  height: auto;
-  background: rgba(44, 43, 43, 0.8);
-  border-radius: 10px;
-  border: 2px solid rgb(85, 84, 84);
-}
-.resultBox {
-  width: 210px;
-  background: rgba(44, 43, 43, 0.8);
-  border-radius: 10px;
-  border: 2px solid rgb(85, 84, 84);
-}
-
 button {
   height: 22px;
   width: 100px;
@@ -43,7 +29,3 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
-
-
-

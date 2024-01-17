@@ -3,9 +3,9 @@ import React from "react";
 const DailyForecast = ({ day, dayOfWeek }) => {
   return (
     <div className="dailyForecastBox">
-      <p className="day">{dayOfWeek}</p>
-      <p className="temp">{Math.round(day.main.temp)}°C</p>
-      <p className="desc">
+      <p>{dayOfWeek}</p>
+      <p>{Math.round(day.main.temp)}°C</p>
+      <p>
         {day.weather[0].description.charAt(0).toUpperCase() +
           day.weather[0].description.slice(1)}
       </p>

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import  "../Search/search.css"
+import "../Search/search.css";
 
 const SearchComponent = ({ onSearch }) => {
   const [search, setSearch] = useState("");
 
   const handleSearch = () => {
     if (search !== "") onSearch(search);
-else
-alert("Type something to search")
+    else alert("Cannot fetch weather data!")
   };
 
   return (
@@ -18,7 +17,9 @@ alert("Type something to search")
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button className="searchbtn" onClick={handleSearch}>Sök</button>
+      <button className="searchbtn" onClick={handleSearch}>
+        Sök
+      </button>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-.weatherBox1 {
+.resultBoxText {
   text-shadow: rgb(37, 37, 37) 1.5px 1.1px;
   font-size: large;
   font-weight: 500;
@@ -11,14 +11,8 @@
 
 .resultBox {
   margin: "5px";
-}
-
-.forecastContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.weatherBox {
-  display: flex;
-  justify-content: space-around;
+  width: 210px;
+  background: rgba(44, 43, 43, 0.8);
+  border-radius: 10px;
+  border: 2px solid rgb(85, 84, 84);
 }

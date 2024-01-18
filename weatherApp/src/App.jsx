@@ -19,8 +19,7 @@ function App() {
       .then((res) => res.json())
       .then((result) => {
         if (result.cod !== "404") setWeather(result);
-        else
-        alert("Cannot fetch weather data!")
+        else alert("Cannot fetch weather data. Try again!");
         console.log(result);
       });
   };
@@ -33,7 +32,6 @@ function App() {
       .then((result) => {
         if (result.cod !== "404") setForecast(result.list);
         console.log(result);
-        
       });
   };
 
